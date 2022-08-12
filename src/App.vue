@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="flex flex-col min-h-screen font-roboto bg-weather-primary">
 		<Navbar />
 		<main>
 			<router-view />

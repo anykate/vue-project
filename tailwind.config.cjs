@@ -11,6 +11,10 @@ module.exports = {
     fontFamily: {
       roboto: ['Roboto', 'sans-serif'],
     },
+    container: {
+      padding: '2rem',
+      center: true,
+    },
   },
   plugins: [],
 }

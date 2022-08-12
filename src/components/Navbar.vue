@@ -1,28 +1,23 @@
 <template>
-	<header class="text-gray-600 body-font">
-		<div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-			<router-link class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
-				:to="{ name: 'HomeView' }">
-				<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
-					stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
-					viewBox="0 0 24 24">
-					<path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-				</svg>
-				<span class="ml-3 text-xl">Tailblocks</span>
-			</router-link>
-			<nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-				<router-link class="hover:text-gray-900" :to="{ name: 'HomeView' }"
-					:class="{ 'active': $route.path == '/' }">
-					Home</router-link>
-				<router-link class="ml-3 hover:text-gray-900" :to="{ name: 'AboutView' }"
-					:class="{ 'active': $route.path == '/about' }">About</router-link>
-			</nav>
-		</div>
+	<header class="sticky top-0 bg-weather-primary shadow-lg">
+		<nav class="container flex flex-col sm:flex-row items-center gap-4 text-white py-6 justify-between">
+			<RouterLink :to="{ name: 'HomeView' }">
+				<div class="flex items-center gap-3 text-2xl">
+					<font-awesome-icon icon="fa-solid fa-sun" />
+					<p>The Local Weather</p>
+				</div>
+			</RouterLink>
+			<div class="flex gap-3">
+				<div class="text-xl hover:text-weather-secondary duration-150 cursor-pointer">
+					<font-awesome-icon icon="fa-solid fa-circle-info" />
+				</div>
+				<div class="text-xl hover:text-weather-secondary duration-150 cursor-pointer">
+					<font-awesome-icon icon="fa-solid fa-plus" />
+				</div>
+			</div>
+		</nav>
 	</header>
 </template>
 
 <style scoped>
-.active {
-	@apply bg-slate-600 p-2 text-slate-300;
-}
 </style>
